@@ -306,13 +306,36 @@ img {
   transition: 1.5s;
 }
 
+
 .home__blob {
-  width: 200px;
-  fill: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 320px;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  animation: FloatImage 4s ease-in-out infinite;
+  transition: 0.4s;
+}
+.home__blob-img:hover{
+  transform: scale(1.05);
+}
+@keyframes FloatImage{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
 
 .home__data {
